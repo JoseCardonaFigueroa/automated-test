@@ -5,7 +5,12 @@ class MainPageLocators(object):
     GO_BUTTON = (By.ID, 'masthead-search-term')
 
 
-
 class SearchResultsPageLocators(object):
     """A class for search results locators. All search results locators should come here"""
     WANTED_VIDEO = (By.XPATH, '//*[@title="Introducing GuideSpark\'s Innovative Platform"]')
+
+class VideoPageLocators(object):
+    """ A class for video locators. All video locators should come here """
+    PLAY_BTN = (By.CLASS_NAME, 'ytp-play-button')
+    VOLUME_SLIDER = (By.CLASS_NAME, 'ytp-volume-slider-handle')
+    PROGRESS_BAR_SLIDER = (By.CLASS_NAME, 'ytp-scrubber-pull-indicator')

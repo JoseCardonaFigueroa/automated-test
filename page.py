@@ -49,11 +49,12 @@ class SearchResultsPage(BasePage):
 
 class VideoPage(BasePage):
     """ Video page action methods """
-    def is_play_btn_working(self):
+    def click_play_pause_btn(self):
+        element = self.driver.find_element(*VideoPageLocators.PLAY_BTN)
+        elemenr.click()
+
+    def drag_volume_slider(self):
         pass
 
-    def is_volume_working(self):
-        pass
-
-    def is_draggable_progress_bar_working(self):
+    def drag_progress_bar(self):
         pass
