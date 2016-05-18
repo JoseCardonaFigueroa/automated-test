@@ -2,7 +2,7 @@ import unittest
 from selenium import webdriver
 from modules import read_data, page
 
-class YouTubeVideoSearch(unittest.TestCase):
+class YouTubeVideoSearch5(unittest.TestCase):
     """A sample test class to show how page object works"""
 
     def setUp(self):
