@@ -49,3 +49,11 @@ class SearchResultsPage(BasePage):
 
 class VideoPage(BasePage):
     """ Video page action methods """
+    def is_play_btn_working(self):
+        pass
+
+    def is_volume_working(self):
+        pass
+
+    def is_draggable_progress_bar_working(self):
+        pass
