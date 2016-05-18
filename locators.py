@@ -2,7 +2,8 @@ from selenium.webdriver.common.by import By
 
 class MainPageLocators(object):
     """A class for main page locators. All main page locators should come here"""
-    GO_BUTTON = (By.ID, 'masthead-search-term')
+    #SEARCH_BAR = (By.ID, 'masthead-search-term')
+    GO_BUTTON = (By.ID, 'search-btn')
 
 
 class SearchResultsPageLocators(object):
