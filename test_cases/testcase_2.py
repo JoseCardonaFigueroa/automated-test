@@ -38,6 +38,11 @@ class YouTubeVideoSearch2(unittest.TestCase):
     def tearDown(self):
         self.driver.close()
 
+def suite():
+    test_suite = unittest.TestSuite()
+    test_suite = unittest.makeSuite(YouTubeVideoSearch2)
+    return test_suite
+
 """
 if __name__ == '__main__':
    log_file = 'log_file.txt'
