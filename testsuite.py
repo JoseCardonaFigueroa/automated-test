@@ -7,11 +7,12 @@ def suite():
 
     # Test cases to execute
     test_suite.addTest(testcase.suite())
+    """"
     test_suite.addTest(testcase_2.suite())
     test_suite.addTest(testcase_3.suite())
     test_suite.addTest(testcase_4.suite())
     test_suite.addTest(testcase_5.suite())
-
+    """
     return test_suite
 
 if __name__ == "__main__":

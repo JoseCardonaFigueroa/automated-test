@@ -32,8 +32,7 @@ class YouTubeVideoSearch(unittest.TestCase):
 
         video_page = page.VideoPage(self.driver)
         assert video_page.is_play_btn_clickable(), "Play btn not working"
-        #assert video_page.drag_volume_slider(), "Slider not draggable"
-
+        video_page.drag_volume_slider
 
     def tearDown(self):
         self.driver.close()
@@ -42,6 +41,6 @@ def suite():
     test_suite = unittest.TestSuite()
     test_suite = unittest.makeSuite(YouTubeVideoSearch)
     return test_suite
-    
+
 if __name__ == "__main__":
     unittest.main()
