@@ -1,5 +1,6 @@
-rom element import BasePageElement
+from element import BasePageElement
 from locators import MainPageLocators
+from locators import SearchResultsPageLocators as ResultLocators
 
 class SearchTextElement(BasePageElement):
     """This class gets the search text from the specified locator"""
@@ -39,4 +40,12 @@ class SearchResultsPage(BasePage):
         # element, but as for now it works fine
         return "No results found." not in self.driver.page_source
 
-    
+    def is_video_available(self):
+        return self.driver.find_element(*ResultsLocators.WANTED_VIDEO)
+
+    def click_wanted_video(self):
+        element = self.driver.find_element(*ResultsLocators.WANTED_VIDEO)
+        element.click()
+
+class VideoPage(BasePage):
+    """ Video page action methods """
