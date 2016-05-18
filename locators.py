@@ -13,5 +13,7 @@ class SearchResultsPageLocators(object):
 class VideoPageLocators(object):
     """ A class for video locators. All video locators should come here """
     PLAY_BTN = (By.CLASS_NAME, 'ytp-play-button')
+    MUTE_BTN = (By.CLASS_NAME, 'ytp-mute-button')
     VOLUME_SLIDER = (By.CLASS_NAME, 'ytp-volume-slider-handle')
+    VOLUME_SLIDER_AFTER = (By.CSS_SELECTOR, 'ytp-volume-slider-handle')
     PROGRESS_BAR_SLIDER = (By.CLASS_NAME, 'ytp-scrubber-pull-indicator')

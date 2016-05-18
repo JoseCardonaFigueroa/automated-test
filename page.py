@@ -2,6 +2,7 @@ from elements import BasePageElement
 from locators import MainPageLocators
 from locators import SearchResultsPageLocators
 from locators import VideoPageLocators
+from selenium.webdriver.common.action_chains import ActionChains
 
 class SearchTextElement(BasePageElement):
     """This class gets the search text from the specified locator"""
@@ -57,8 +58,11 @@ class VideoPage(BasePage):
         element = self.driver.find_element(*VideoPageLocators.PLAY_BTN)
         element.click()
 
+    """
     def drag_volume_slider(self):
-        pass
-
+        source_element = VideoPageLocators.VOLUME_SLIDER
+        elem_id, elem = *VideoPageLocators.VOLUME_SLIDER_AFTER
+        return ActionChains(self.driver).drag_and_drop(*source_element, elem_id).perform()
+    """
     def drag_progress_bar(self):
         pass
