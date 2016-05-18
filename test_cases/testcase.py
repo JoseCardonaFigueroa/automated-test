@@ -1,12 +1,12 @@
 import unittest
 from selenium import webdriver
-import page
-import read_data
+from modules import read_data, page
 
 class YouTubeVideoSearch(unittest.TestCase):
     """A sample test class to show how page object works"""
 
     def setUp(self):
+        import pdb; pdb.set_trace()
         self.driver = webdriver.Firefox()
         self.driver.get(read_data.read_csv()[0])
 
@@ -46,5 +46,5 @@ if __name__ == '__main__':
    unittest.main(testRunner=runner)
    f.close()
 """
-#if __name__ == "__main__":
-    #unittest.main()
+if __name__ == "__main__":
+    unittest.main()
