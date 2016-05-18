@@ -42,13 +42,6 @@ def suite():
     test_suite = unittest.TestSuite()
     test_suite = unittest.makeSuite(YouTubeVideoSearch4)
     return test_suite
-"""
-if __name__ == '__main__':
-   log_file = 'log_file.txt'
-   f = open(log_file, "w")
-   runner = unittest.TextTestRunner(f)
-   unittest.main(testRunner=runner)
-   f.close()
-"""
+    
 if __name__ == "__main__":
     unittest.main()
