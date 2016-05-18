@@ -1,6 +1,7 @@
 from elements import BasePageElement
 from locators import MainPageLocators
 from locators import SearchResultsPageLocators
+from locators import VideoPageLocators
 
 class SearchTextElement(BasePageElement):
     """This class gets the search text from the specified locator"""
@@ -49,9 +50,12 @@ class SearchResultsPage(BasePage):
 
 class VideoPage(BasePage):
     """ Video page action methods """
+    def is_play_btn_clickable(self):
+        return self.driver.find_element(*VideoPageLocators.PLAY_BTN)
+
     def click_play_pause_btn(self):
         element = self.driver.find_element(*VideoPageLocators.PLAY_BTN)
-        elemenr.click()
+        element.click()
 
     def drag_volume_slider(self):
         pass

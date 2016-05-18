@@ -29,6 +29,9 @@ class YouTubeVideoSearch(unittest.TestCase):
         assert search_results_page.is_video_available(), "Video not found"
         search_results_page.click_wanted_video()
 
+        video_page = page.VideoPage(self.driver)
+        assert video_page.is_play_btn_clickable(), "Play btn not working"
+        
 
     def tearDown(self):
         self.driver.close()
