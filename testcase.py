@@ -1,13 +1,14 @@
 import unittest
 from selenium import webdriver
 import page
+import read_data
 
 class YouTubeVideoSearch(unittest.TestCase):
     """A sample test class to show how page object works"""
 
     def setUp(self):
         self.driver = webdriver.Firefox()
-        self.driver.get("http://youtube.com")
+        self.driver.get(read_data.read_csv()[0])
 
     def test_search_video(self):
         """
@@ -32,10 +33,18 @@ class YouTubeVideoSearch(unittest.TestCase):
         video_page = page.VideoPage(self.driver)
         assert video_page.is_play_btn_clickable(), "Play btn not working"
         #assert video_page.drag_volume_slider(), "Slider not draggable"
-        
+
 
     def tearDown(self):
         self.driver.close()
 
-if __name__ == "__main__":
-    unittest.main()
+"""
+if __name__ == '__main__':
+   log_file = 'log_file.txt'
+   f = open(log_file, "w")
+   runner = unittest.TextTestRunner(f)
+   unittest.main(testRunner=runner)
+   f.close()
+"""
+#if __name__ == "__main__":
+    #unittest.main()
