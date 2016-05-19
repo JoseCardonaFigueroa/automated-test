@@ -32,7 +32,8 @@ class YouTubeVideoSearch(unittest.TestCase):
 
         video_page = page.VideoPage(self.driver)
         assert video_page.is_play_btn_clickable(), "Play btn not working"
-        video_page.drag_volume_slider
+        assert video_page.drag_volume_slider(), "Volume not found"
+        assert video_page.drag_progress_bar(), "Progress bar not found"
 
     def tearDown(self):
         self.driver.close()
